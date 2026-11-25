@@ -1,3 +1,6 @@
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection.Metadata.Ecma335;
+
 namespace SorteraLista;
 
 /// <summary>
@@ -21,7 +24,45 @@ public static class Sortering
     public static bool ArSorterad(List<int> lista)
     {
         // Skriv din kod här
-        throw new NotImplementedException();
+        /* didnt work
+        bool sort = true;
+        if (sort == true){
+            return true;
+        } 
+        else
+        {
+        for (int i = 0; i < lista.Count -1 && sort; i++) 
+        {
+          sort = false;
+           for (int j = 0; j < lista.Count; j++) 
+            { 
+            if (lista [j] > lista [j - 1])
+                {
+                    int tmp = lista [j + 1];
+                    lista[j + 1] = lista [j];
+                    lista[j] = tmp;
+                    sort = true;
+                }
+          }
+        }
+        }
+        if (number == 1)
+            return false;
+        for (int i = 0; i < lista.Count; i++)
+        {
+            if ((i + 1 < number) && (lista[i] > lista[i + 1]))
+            {
+                int temp = lista[i];
+                lista[i] = lista[i + 1];
+                lista[i + 1] = temp;
+            }
+            else continue;
+        }
+        return ArSorterad(lista, number - 1);
+        */
+        //if (lista == null)
+        //    return true;
+        
     }
 
     /// <summary>
