@@ -26,7 +26,14 @@ public static class Ovningar
     public static int StorstAvTva(int a, int b)
     {
         // Skriv din kod här
-        throw new NotImplementedException();
+        if (a > b) 
+        {
+            return a;
+        }
+        else
+        {
+            return b;
+        }
     }
 
     /// <summary>
@@ -41,7 +48,7 @@ public static class Ovningar
     public static bool ArJamnt(int tal)
     {
         // Skriv din kod här
-        throw new NotImplementedException();
+        return false;
     }
 
     /// <summary>
@@ -62,9 +69,32 @@ public static class Ovningar
     public static string Betyg(int poang)
     {
         // Skriv din kod här
-        throw new NotImplementedException();
-    }
-
+        if (poang >= 0 && poang <= 49) {
+            return "F";
+        } 
+             else if (poang >= 50 && poang <= 59)
+        {                                     
+            return "E";                       
+        }    
+             else if (poang >= 60 && poang <= 69)
+        {                                     
+            return "D";                       
+        }     
+             else if (poang >= 70 && poang <= 79)
+        {                                     
+            return "C";                       
+        }  
+             else if (poang >= 80 && poang <= 89)
+        {                                     
+            return "B";                       
+        }  
+             else if (poang >= 90 && poang <= 100)
+        {                                     
+            return "A";                       
+        }  
+       
+    }                                         
+                                              
     // =====================================================================
     // DEL 2: LOOPAR (for / while)
     // =====================================================================
