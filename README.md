@@ -3,9 +3,47 @@
 Övningar i C# som rättas automatiskt. Du skriver koden, pushar till GitHub
 och får direkt veta vilka tester som är godkända.
 
-| Nr | Övning | Mapp |
+## Börja här
+
+1. **Läs [Så jobbar du i kursen](guider/sa-jobbar-du.md).** Den förklarar
+   hur allt hänger ihop och vad du gör varje lektion.
+2. **Gör [Kom igång](#kom-igång-görs-en-gång)** längre ner på den här sidan (en gång).
+3. **Börja med övning 01.**
+
+Så här ser varje lektion ut:
+
+```
+ Hämta nytt  →  Läs  →  Skriv kod  →  Provkör  →  Testa  →  Commit  →  Push  →  Kolla Actions
+ från läraren   uppgift              (▶)        (Test     (spara)    (skicka)   (rättning)
+                + guide                          Explorer)
+```
+
+## Övningar
+
+| Nr | Övning | Läs först |
 |---|---|---|
-| 01 | Sortera en lista | [`01-sortera-lista`](01-sortera-lista) |
+| 01 | [Grunder – villkor, loopar och arrayer](01-grunder) | [Variabler](guider/variabler-och-datatyper.md), [Villkor och loopar](guider/villkor-och-loopar.md), [Metoder](guider/metoder.md) |
+| 02 | [Sortera en lista](02-sortera-lista) | [Villkor och loopar](guider/villkor-och-loopar.md), [Testkör](guider/testkora.md) |
+| 03 | [Filstrukturen i C#](03-filstruktur) | [Filstrukturen](guider/filstruktur.md), [Recept: skapa projekt](guider/skapa-projekt.md) |
+| 04 | [Träning – 40 små uppgifter](04-traning) | [Variabler](guider/variabler-och-datatyper.md), [Villkor och loopar](guider/villkor-och-loopar.md) |
+
+## Guider
+
+Alla guider finns i **[guider/](guider/README.md)**. Läs de fem första innan du börjar:
+
+| Guide | Handlar om |
+|---|---|
+| [Så jobbar du i kursen](guider/sa-jobbar-du.md) | Arbetsgången, reglerna, när något går fel |
+| [Git och GitHub](guider/git-och-github.md) | Commit, push, pull, fork och vad allt betyder |
+| [Så fungerar C#](guider/sa-fungerar-csharp.md) | Från kod till program, tre sorters fel |
+| [Tester och autorättning](guider/tester-och-autorattning.md) | Vad som händer när du pushar |
+| [Visual Studio och VS Code](guider/visual-studio-och-vscode.md) | Fönstren, kortkommandon, köra och debugga |
+| [Variabler och datatyper](guider/variabler-och-datatyper.md) | `int`, `double`, `string`, att räkna |
+| [Villkor, loopar och arrayer](guider/villkor-och-loopar.md) | `if`, `for`, `while`, arrayer |
+| [Metoder](guider/metoder.md) | Parametrar och returvärden |
+| [Testkör din kod själv](guider/testkora.md) | Provkör, debuggern, läsa testfel |
+| [Filstrukturen i C#](guider/filstruktur.md) | Solution, projekt, program eller bibliotek |
+| [Recept: skapa projekt](guider/skapa-projekt.md) | Bygga eget program och bibliotek |
 
 ---
 
@@ -24,10 +62,15 @@ GitHub stänger av automatiska körningar i nya forkar.
 Gör du inte det här steget händer ingenting när du pushar.
 
 ### 3. Klona din fork
+Byt `DITT-NAMN` mot **ditt eget** GitHub-namn. Klona din fork, inte lärarens repo,
+annars går det inte att pusha.
 ```bash
-git clone https://github.com/OskarRayFrayssinet/learn-csharp-with-oskar.git
+git clone https://github.com/DITT-NAMN/learn-csharp-with-oskar.git
 cd learn-csharp-with-oskar
+start learn-csharp-with-oskar.sln
 ```
+Den sista raden öppnar övningarna i Visual Studio. Använder du VS Code, skriv `code .` i stället.
+Se [Visual Studio och VS Code](guider/visual-studio-och-vscode.md).
 
 ### 4. Koppla till lärarens repo
 Då kan du hämta nya övningar när de kommer:
@@ -41,6 +84,10 @@ git remote add upstream https://github.com/OskarRayFrayssinet/learn-csharp-with-
 
 1. Öppna övningens mapp och läs dess README.
 2. Skriv din kod i den fil som README:n anger. **Ändra inte i testfilerna.**
+   **Provkör** med egna värden: högerklicka på övningens `Provkor`-projekt,
+   välj **Set as Startup Project** och tryck ▶. Läs mer i
+   [Testkör din kod själv](guider/testkora.md).
+   Kör sedan testerna med **Test → Run All Tests**.
 3. Spara, committa och pusha:
    ```bash
    git add .
@@ -65,7 +112,44 @@ dotnet test
 
 ---
 
-## Hämta nya övningar från läraren
+## Nya övningar från läraren
+
+Läraren lägger till nya övningar och rättelser i sitt repo. De kommer
+**inte** automatiskt till din fork, så du hämtar dem själv.
+
+### Kolla om det finns uppdateringar
+
+Inget av sätten nedan ändrar något i dina filer.
+
+**På GitHub (enklast):** öppna din fork. Ovanför fillistan står något av följande:
+
+| Det står | Betyder |
+|---|---|
+| *This branch is up to date with …* | Inga uppdateringar |
+| *This branch is **3 commits behind** …* | Det finns 3 nya ändringar från läraren |
+| *This branch is 2 commits ahead of …* | Bara dina egna ändringar, inget nytt från läraren |
+| *… ahead of, 3 commits behind …* | Både och. Det finns uppdateringar att hämta |
+
+Klicka på länken **"3 commits behind"** för att se vad läraren har ändrat.
+
+**I PowerShell:**
+```bash
+git fetch upstream
+git log --oneline HEAD..upstream/main
+```
+- `git fetch upstream` kollar vad som finns hos läraren, men ändrar ingenting i dina filer.
+- `git log …` listar ändringarna som du inte har hämtat än, till exempel:
+  ```
+  a1b2c3d Ny övning: 04-strängar
+  ```
+- **Skrivs ingenting ut** finns det inga uppdateringar.
+
+Vill du också se vilka filer som har ändrats:
+```bash
+git diff --stat HEAD...upstream/main
+```
+
+### Hämta uppdateringarna
 
 Committa alltid ditt eget arbete först, och hämta sedan:
 ```bash
