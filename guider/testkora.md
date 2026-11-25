@@ -22,6 +22,7 @@ anropar dina metoder och skriver ut svaren. Det rättas inte, så du får
 |---|---|
 | 01 Grunder | `01-grunder/Grunder.Provkor` |
 | 02 Sortera en lista | `02-sortera-lista/SorteraLista.Provkor` |
+| 04 Träning | `04-traning/Traning.Provkor` |
 
 ### Så kör du
 1. Högerklicka på Provkör-projektet i **Solution Explorer** och välj

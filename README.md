@@ -25,10 +25,11 @@ Så här ser varje lektion ut:
 | 01 | [Grunder – villkor, loopar och arrayer](01-grunder) | [Variabler](guider/variabler-och-datatyper.md), [Villkor och loopar](guider/villkor-och-loopar.md), [Metoder](guider/metoder.md) |
 | 02 | [Sortera en lista](02-sortera-lista) | [Villkor och loopar](guider/villkor-och-loopar.md), [Testkör](guider/testkora.md) |
 | 03 | [Filstrukturen i C#](03-filstruktur) | [Filstrukturen](guider/filstruktur.md), [Recept: skapa projekt](guider/skapa-projekt.md) |
+| 04 | [Träning – 40 små uppgifter](04-traning) | [Variabler](guider/variabler-och-datatyper.md), [Villkor och loopar](guider/villkor-och-loopar.md) |
 
 ## Guider
 
-Alla guider finns i **[guider/](guider/README.md)**. Läs de fyra första innan du börjar:
+Alla guider finns i **[guider/](guider/README.md)**. Läs de fem första innan du börjar:
 
 | Guide | Handlar om |
 |---|---|
@@ -36,6 +37,7 @@ Alla guider finns i **[guider/](guider/README.md)**. Läs de fyra första innan 
 | [Git och GitHub](guider/git-och-github.md) | Commit, push, pull, fork och vad allt betyder |
 | [Så fungerar C#](guider/sa-fungerar-csharp.md) | Från kod till program, tre sorters fel |
 | [Tester och autorättning](guider/tester-och-autorattning.md) | Vad som händer när du pushar |
+| [Visual Studio och VS Code](guider/visual-studio-och-vscode.md) | Fönstren, kortkommandon, köra och debugga |
 | [Variabler och datatyper](guider/variabler-och-datatyper.md) | `int`, `double`, `string`, att räkna |
 | [Villkor, loopar och arrayer](guider/villkor-och-loopar.md) | `if`, `for`, `while`, arrayer |
 | [Metoder](guider/metoder.md) | Parametrar och returvärden |
@@ -67,7 +69,8 @@ git clone https://github.com/DITT-NAMN/learn-csharp-with-oskar.git
 cd learn-csharp-with-oskar
 start learn-csharp-with-oskar.sln
 ```
-Den sista raden öppnar övningarna i Visual Studio.
+Den sista raden öppnar övningarna i Visual Studio. Använder du VS Code, skriv `code .` i stället.
+Se [Visual Studio och VS Code](guider/visual-studio-och-vscode.md).
 
 ### 4. Koppla till lärarens repo
 Då kan du hämta nya övningar när de kommer:

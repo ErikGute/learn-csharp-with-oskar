@@ -133,6 +133,7 @@ kan hämtas utan konflikter.
 | …prova min kod med egna värden | Övningens `Provkor`-projekt |
 | …se om mina tester är gröna | **Test Explorer** i Visual Studio |
 | …se min rättning | Fliken **Actions** i min fork på GitHub |
+| …hitta rätt i Visual Studio eller VS Code | [Visual Studio och VS Code](visual-studio-och-vscode.md) |
 | …förstå något bättre | [guider/](README.md) |
 
 ---

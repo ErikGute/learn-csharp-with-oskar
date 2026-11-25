@@ -39,6 +39,22 @@ som är sant. Ordningen spelar alltså roll.
 | `\|\|` | eller (minst ett måste vara sant) | `dag == "lördag" \|\| dag == "söndag"` |
 | `!` | inte | `!klar` |
 
+### `switch`: välja bland många fasta värden
+När ett värde ska jämföras med många olika alternativ blir `switch` ofta
+tydligare än en lång rad med `else if`:
+
+```csharp
+switch (nummer)
+{
+    case 1:
+        return "ett";
+    case 2:
+        return "två";
+    default:              // alla andra värden
+        return "många";
+}
+```
+
 ⚠️ **Vanligt fel:** `=` betyder *lägg värdet i variabeln*, medan `==`
 betyder *är lika med?*. I ett villkor ska det nästan alltid vara `==`.
 

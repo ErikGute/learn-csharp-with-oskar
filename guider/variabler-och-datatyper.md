@@ -88,6 +88,47 @@ Console.WriteLine($"{namn} fick {poang} poäng.");   // Ali fick 85 poäng.
 
 ---
 
+## Arbeta med text
+
+En `string` är en rad med tecken (`char`). Precis som i en array har varje
+tecken ett index som börjar på 0.
+
+```csharp
+string ord = "Hej";
+//  index:    012
+
+ord.Length          // 3, antal tecken
+ord[0]              // 'H', första tecknet (en char)
+ord[ord.Length - 1] // 'j', sista tecknet
+ord.ToUpper()       // "HEJ"
+ord.ToLower()       // "hej"
+ord + " då"         // "Hej då", sätt ihop text med +
+ord == "Hej"        // true, jämför text
+```
+
+Gå igenom tecknen ett i taget:
+```csharp
+foreach (char tecken in ord)
+{
+    Console.WriteLine(tecken);    // H, e, j
+}
+```
+
+Bygg ihop en ny text i en loop:
+```csharp
+string resultat = "";             // börja med tom text
+for (int i = 0; i < 3; i++)
+{
+    resultat += "ha";             // lägg till i slutet
+}
+// resultat är nu "hahaha"
+```
+
+⚠️ `'a'` (enkla citattecken) är en `char`, medan `"a"` (dubbla) är en
+`string`. Jämför ett tecken med `tecken == 'a'`.
+
+---
+
 ## Byta mellan typer
 
 | Från → till | Så gör du | Exempel |
